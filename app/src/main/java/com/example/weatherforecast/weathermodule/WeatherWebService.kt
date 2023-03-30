@@ -1,9 +1,10 @@
-package com.example.weatherforecast
+package com.example.weatherforecast.weathermodule
 
+import com.example.weatherforecast.dataclasses.Location
+import com.example.weatherforecast.dataclasses.WeatherResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
-import retrofit2.http.QueryMap
 
 interface WeatherWebService {
     /**

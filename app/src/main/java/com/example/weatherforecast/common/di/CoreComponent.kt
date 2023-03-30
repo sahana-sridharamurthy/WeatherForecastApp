@@ -1,8 +1,14 @@
-package com.example.weatherforecast
+package com.example.weatherforecast.common.di
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
+import com.example.weatherforecast.BuildConfig
+import com.example.weatherforecast.common.BaseUrl
+import com.example.weatherforecast.weathermodule.WeatherActivity
+import com.example.weatherforecast.weathermodule.WeatherRepository
+import com.example.weatherforecast.weathermodule.WeatherViewModelFactory
+import com.example.weatherforecast.weathermodule.WeatherWebService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Component
@@ -35,7 +41,8 @@ class CoreModule(val context: Context) {
     }
 
     @Provides
-    fun getWeatherWebService(retrofit: Retrofit): WeatherWebService = retrofit.create(WeatherWebService::class.java)
+    fun getWeatherWebService(retrofit: Retrofit): WeatherWebService = retrofit.create(
+        WeatherWebService::class.java)
 
     @Provides
     fun getMoshi(): Moshi {

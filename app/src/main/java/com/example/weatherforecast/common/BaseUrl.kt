@@ -1,4 +1,5 @@
-package com.example.weatherforecast;
+package com.example.weatherforecast.common
+
 class BaseUrl(val value: String) {
 
     override fun hashCode(): Int {

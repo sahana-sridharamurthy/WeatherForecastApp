@@ -1,4 +1,4 @@
-package com.example.weatherforecast
+package com.example.weatherforecast.common
 
 sealed class NetworkResponse<T> {
     data class Success<T>(var data: T) : NetworkResponse<T>()
